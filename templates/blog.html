@@ -1,13 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>My Blog</h1>
-<div class="blog-posts" aria-label="Blog Posts">
-    {% for post in posts %}
-    <article class="post">
-        <h2>{{ post.title }}</h2>
-        <p class="date">{{ post.date }}</p>
-        <p>{{ post.excerpt }} <a href="{{ post.link }}" target="_blank" rel="noopener">Read More</a></p>
-    </article>
-    {% endfor %}
-</div>
+<section id="blog">
+    <h1>My Blog</h1>
+    <p>Welcome to my blog, where I share insights, tutorials, and updates on web development, software engineering, and industry trends.</p>
+
+    <div class="blog-posts-grid" aria-label="Blog Posts">
+        {% for post in posts %}
+        <article class="blog-card">
+            <div class="blog-content">
+                <h2>{{ post.title }}</h2>
+                <p class="blog-date">Published on {{ post.date }}</p>
+                <p class="blog-excerpt">{{ post.excerpt }}</p>
+                <a href="{{ url_for('blog_post', post_id=loop.index) }}" class="btn">Read More</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination Mock -->
+    <div class="pagination" aria-label="Pagination">
+        <a href="#" class="page-btn">« Previous</a>
+        <a href="#" class="page-btn active">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <a href="#" class="page-btn">Next »</a>
+    </div>
+</section>
 {% endblock %}

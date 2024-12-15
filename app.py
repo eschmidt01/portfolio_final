@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, send_from_directory
 import json
 import os
 
+from markdown import markdown
+
 app = Flask(__name__, instance_relative_config=True)
 
 def load_json_data(filename):
@@ -125,6 +127,12 @@ def blog():
     Blog page - lists blog posts with excerpts and links.
     """
     return render_template('blog.html', posts=blog_posts, title="Blog")
+
+@app.route('/blog/<int:post_id>')
+def blog_post(post_id):
+    post = blog_posts[post_id - 1]
+    post['content'] = markdown(post['content'], extensions=['fenced_code'])
+    return render_template('blog_post.html', post=post, title=post['title'])
 
 @app.route('/resume')
 def resume():

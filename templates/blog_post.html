@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="blog-post">
+    <h1>{{ post.title }}</h1>
+    <p class="blog-date">Published on {{ post.date }}</p>
+    <div class="blog-content">
+        {{ post.content | safe }}
+    </div>
+    <a href="{{ url_for('blog') }}" class="btn">Back to Blog</a>
+</section>
+{% endblock %}
