@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Skills</h1>
+<p>Below is a showcase of my technical and professional skills, categorized for better clarity. Hover over each skill to see my proficiency percentage!</p>
+
+<div class="skills-categories">
+    <!-- Example: Front-End Skills -->
+    <section class="skills-category">
+        <h2>Front-End Development</h2>
+        <div class="skills-list">
+            {% for skill in skills if skill.category == "Front-End" %}
+            <div class="skill">
+                <div class="skill-content">
+                    <div class="skill-icon">
+                        <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                    </div>
+                    <div class="skill-info">
+                        <strong>{{ skill.name }}</strong>
+                        <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                            <div class="progress-bar">
+                                <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                            </div>
+                            <span class="progress-label">{{ skill.level }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Example: Back-End Skills -->
+    <section class="skills-category">
+        <h2>Back-End Development</h2>
+        <div class="skills-list">
+            {% for skill in skills if skill.category == "Back-End" %}
+            <div class="skill">
+                <div class="skill-content">
+                    <div class="skill-icon">
+                        <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                    </div>
+                    <div class="skill-info">
+                        <strong>{{ skill.name }}</strong>
+                        <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                            <div class="progress-bar">
+                                <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                            </div>
+                            <span class="progress-label">{{ skill.level }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Example: Other Skills -->
+    <section class="skills-category">
+        <h2>Other Skills</h2>
+        <div class="skills-list">
+            {% for skill in skills if skill.category == "Other" %}
+            <div class="skill">
+                <div class="skill-content">
+                    <div class="skill-icon">
+                        <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                    </div>
+                    <div class="skill-info">
+                        <strong>{{ skill.name }}</strong>
+                        <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                            <div class="progress-bar">
+                                <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                            </div>
+                            <span class="progress-label">{{ skill.level }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+{% endblock %}

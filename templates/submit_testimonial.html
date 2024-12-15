@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Submit a Testimonial</h1>
+{% if success %}
+<p>Thank you! Your testimonial has been submitted and will be reviewed shortly.</p>
+{% else %}
+<form method="POST" aria-label="Testimonial Submission Form">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+    <label for="role">Role/Relationship:</label>
+    <input type="text" name="role" id="role" required>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" required></textarea>
+    <button type="submit" class="btn">Submit</button>
+</form>
+{% endif %}
+{% endblock %}

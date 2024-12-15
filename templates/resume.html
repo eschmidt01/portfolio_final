@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Resume</h1>
+<p>You can scroll through my resume below or download a copy.</p>
+<div class="resume-viewer" aria-label="Interactive Resume">
+    <!-- Using an iframe for simplicity. For advanced viewing, integrate PDF.js -->
+    <iframe src="{{ url_for('static', filename='pdf/resume.pdf') }}" width="100%" height="600px" title="Interactive Resume View"></iframe>
+</div>
+<a href="{{ url_for('download_resume') }}" class="btn" download>Download PDF</a>
+{% endblock %}

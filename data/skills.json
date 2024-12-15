@@ -1,0 +1,10 @@
+[
+    { "name": "HTML & CSS", "level": 95, "category": "Front-End", "icon": "html-css.png" },
+    { "name": "JavaScript", "level": 85, "category": "Front-End", "icon": "javascript.png" },
+    { "name": "React", "level": 80, "category": "Front-End", "icon": "react.png" },
+    { "name": "Python", "level": 90, "category": "Back-End", "icon": "python.png" },
+    { "name": "Flask", "level": 85, "category": "Back-End", "icon": "flask.png" },
+    { "name": "SQL", "level": 80, "category": "Back-End", "icon": "sql.png" },
+    { "name": "Git & Version Control", "level": 90, "category": "Other", "icon": "git.png" },
+    { "name": "Docker", "level": 75, "category": "Other", "icon": "docker.png" }
+]

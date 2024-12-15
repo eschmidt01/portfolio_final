@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ project.title }}</h1>
+<img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} featured image">
+<p><strong>Objectives:</strong> {{ project.objectives }}</p>
+<p><strong>Challenges:</strong> {{ project.challenges }}</p>
+<p><strong>Solutions:</strong> {{ project.solutions }}</p>
+<p><strong>Results:</strong> {{ project.results }}</p>
+<p><strong>Technologies:</strong> {{ project.skills|join(', ') }}</p>
+<a href="{{ url_for('project_gallery') }}" class="btn">Back to Projects</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>About Me</h1>
+<img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile Image" class="profile-img-large" />
+<p>I am a full-stack developer with a background in computer science and a passion for web technologies. Over the past few years, I have worked on numerous projects ranging from small websites to large-scale web applications. I focus on writing clean, maintainable code and creating intuitive user interfaces.</p>
+
+<p>My interests include exploring new technologies, contributing to open-source projects, and continuously improving my skills.</p>
+<p>Feel free to connect with me on:</p>
+<div class="social-links">
+    <a href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+{% endblock %}

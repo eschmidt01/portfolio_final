@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Certified Python Developer",
+        "description": "Earned a certification from the Python Institute for proficiency in Python programming.",
+        "image": "images/badge1.png"
+    },
+    {
+        "title": "React Developer Certification",
+        "description": "Completed an advanced React development certification program.",
+        "image": "images/badge2.png"
+    },
+    {
+        "title": "Hackathon Winner 2023",
+        "description": "Led a team to victory in a national hackathon by developing an innovative mobile app.",
+        "image": "images/badge4.png"
+    },
+    {
+        "title": "Top GitHub Contributor",
+        "description": "Recognized as a top contributor to a popular open-source project on GitHub.",
+        "image": "images/badge3.png"
+    }
+]

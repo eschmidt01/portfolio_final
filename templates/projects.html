@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Projects</h1>
+<p>Select a skill to filter the projects:</p>
+<div class="filter-bar" aria-label="Project Filter">
+    <button data-filter="all" class="btn">All</button>
+    <button data-filter="Python" class="btn">Python</button>
+    <button data-filter="JavaScript" class="btn">JavaScript</button>
+    <button data-filter="Flask" class="btn">Flask</button>
+    <!-- Add more filters as needed -->
+</div>
+<div class="project-grid" id="projectGrid">
+    {% for project in projects %}
+    <div class="project-card" data-skills="{{ project.skills|join(' ') }}" tabindex="0">
+        <img src="{{ url_for('static', filename=project.thumbnail) }}" alt="{{ project.title }} thumbnail">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.short_desc }}</p>
+        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn">View Case Study</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

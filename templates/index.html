@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="about-preview">
+    <h1>Welcome to My Portfolio</h1>
+    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile Image" class="profile-img" />
+    <p>Hello! I'm a dedicated software developer with a passion for building modern, scalable web applications and crafting intuitive user experiences.</p>
+    <a href="{{ url_for('about') }}" class="btn">Learn More About Me</a>
+</section>
+
+<section id="featured-projects" aria-label="Featured Projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        {% for project in projects %}
+        <div class="project-card" tabindex="0">
+            <img src="{{ url_for('static', filename=project.thumbnail) }}" alt="{{ project.title }} thumbnail">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.short_desc }}</p>
+            <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn">View Case Study</a>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('project_gallery') }}" class="btn">View All Projects</a>
+</section>
+
+<section id="skills-preview" aria-label="Skills Overview">
+    <h2>Key Skills</h2>
+    <div class="skills-categories">
+        <!-- Front-End Skills -->
+        <section class="skills-category">
+            <h3>Front-End Development</h3>
+            <div class="skills-list">
+                {% for skill in skills if skill.category == "Front-End" %}
+                <div class="skill">
+                    <div class="skill-content">
+                        <div class="skill-icon">
+                            <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                        </div>
+                        <div class="skill-info">
+                            <strong>{{ skill.name }}</strong>
+                            <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                                </div>
+                                <span class="progress-label">{{ skill.level }}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Back-End Skills -->
+        <section class="skills-category">
+            <h3>Back-End Development</h3>
+            <div class="skills-list">
+                {% for skill in skills if skill.category == "Back-End" %}
+                <div class="skill">
+                    <div class="skill-content">
+                        <div class="skill-icon">
+                            <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                        </div>
+                        <div class="skill-info">
+                            <strong>{{ skill.name }}</strong>
+                            <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                                </div>
+                                <span class="progress-label">{{ skill.level }}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Other Skills -->
+        <section class="skills-category">
+            <h3>Other Skills</h3>
+            <div class="skills-list">
+                {% for skill in skills if skill.category == "Other" %}
+                <div class="skill">
+                    <div class="skill-content">
+                        <div class="skill-icon">
+                            <img src="{{ url_for('static', filename='images/icons/' + skill.icon) }}" alt="{{ skill.name }} icon">
+                        </div>
+                        <div class="skill-info">
+                            <strong>{{ skill.name }}</strong>
+                            <div class="progress-bar-wrapper" title="{{ skill.level }}% proficiency">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width:{{ skill.level }}%" data-skill-level="{{ skill.level }}"></div>
+                                </div>
+                                <span class="progress-label">{{ skill.level }}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <a href="{{ url_for('skills') }}" class="btn">View All Skills</a>
+</section>
+
+<section id="video-intro" aria-label="Video Introduction">
+    <h2>Video Introduction</h2>
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AgVqsmz-ZW4?si=xkgdcMy6EFrjZ68n"
+            title="Video Introduction" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="testimonials-preview" aria-label="Sample Testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonials-carousel">
+        {% for t in testimonials %}
+        <div class="testimonial">
+            <p>"{{ t.message }}"</p>
+            <strong>- {{ t.name }}, {{ t.role }}</strong>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('testimonials_page') }}" class="btn">Read More Testimonials</a>
+</section>
+
+<section id="achievements" aria-label="Achievements and Badges">
+    <h2>Achievements &amp; Badges</h2>
+    <div class="badges">
+        {% for badge in achievements %}
+        <div class="badge" tabindex="0" title="{{ badge.description }}">
+            <img src="{{ url_for('static', filename=badge.image) }}" alt="{{ badge.title }} Badge">
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="resume-download" aria-label="Resume Access">
+    <h2>Get My Resume</h2>
+    <div class="resume-actions">
+        <a href="{{ url_for('download_resume') }}" class="btn" download>Download PDF</a>
+        <a href="{{ url_for('resume') }}" class="btn">View Interactive Resume</a>
+    </div>
+</section>
+{% endblock %}

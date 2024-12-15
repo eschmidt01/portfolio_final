@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2020",
+        "title": "Started Learning Web Development",
+        "description": "Began my journey into web development by learning HTML, CSS, and JavaScript through online courses and projects.",
+        "link": ""
+    },
+    {
+        "date": "2021",
+        "title": "Internship at TechCorp",
+        "description": "Worked on building RESTful APIs using Flask and integrating them into existing applications.",
+        "link": ""
+    },
+    {
+        "date": "2022",
+        "title": "Launched My First Project",
+        "description": "Developed and launched a fully functional e-commerce website for a small business.",
+        "link": "https://example.com/ecommerce-case-study"
+    },
+    {
+        "date": "2023",
+        "title": "Freelance Work and Certifications",
+        "description": "Completed multiple freelance projects and earned certifications in React and Python.",
+        "link": ""
+    }
+]

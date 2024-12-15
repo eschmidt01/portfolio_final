@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>My Blog</h1>
+<div class="blog-posts" aria-label="Blog Posts">
+    {% for post in posts %}
+    <article class="post">
+        <h2>{{ post.title }}</h2>
+        <p class="date">{{ post.date }}</p>
+        <p>{{ post.excerpt }} <a href="{{ post.link }}" target="_blank" rel="noopener">Read More</a></p>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    background: #fdfdfd;
+}
+
+header, footer {
+    background: #002f6c;
+    color: #fff;
+    padding: 1em;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+}
+
+h1, h2, h3 {
+    color: #002f6c;
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.btn {
+    background: #002f6c;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #004080;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-card {
+    background: #f5f5f5;
+    padding: 1em;
+    width: calc(25% - 1em);
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.skills-list .skill {
+    margin-bottom: 1em;
+}
+.progress-bar {
+    background: #ccc;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.progress {
+    background: #002f6c;
+    height: 10px;
+}
+
+.testimonials-carousel {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.testimonial {
+    background: #f5f5f5;
+    padding: 1em;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    border-left: 4px solid #002f6c;
+    padding-left: 2em;
+}
+.timeline-event {
+    margin-bottom: 2em;
+}
+.timeline-event .date {
+    font-weight: bold;
+    color: #002f6c;
+    margin-bottom: 0.5em;
+}
+
+.badges {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.badge img {
+    width: 50px;
+    height: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+form label {
+    margin-top: 1em;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+form button {
+    width: fit-content;
+    margin-top: 1em;
+}
+
+.resume-viewer iframe {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 1em);
+    }
+}
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
+}
+
+.profile-img-large {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    display: block;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    display: block;
+}
+
+/* Skills Page Enhancements */
+
+.skills-categories {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.skills-category {
+    margin-bottom: 2em;
+}
+
+.skills-category h2 {
+    color: #002f6c;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.skill {
+    flex: 1 1 calc(30% - 1em);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skill-content {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.skill-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-info {
+    flex-grow: 1;
+}
+
+.skill-info strong {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.progress-bar-wrapper {
+    position: relative;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 12px;
+    width: 100%;
+    position: relative;
+}
+
+.progress {
+    background: linear-gradient(to right, #002f6c, #0050a0);
+    height: 100%;
+    transition: width 0.6s ease-in-out;
+    border-radius: 5px 0 0 5px;
+}
+
+.progress-label {
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    font-size: 0.9em;
+    color: #002f6c;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill {
+        flex: 1 1 calc(50% - 1em);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        flex: 1 1 100%;
+    }
+}

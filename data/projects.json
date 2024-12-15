@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Flask React App",
+        "thumbnail": "images/project1_thumb.png",
+        "image": "images/project1_thumb.png",
+        "short_desc": "A responsive web application built using Flask and React.",
+        "objectives": "Build a feature-rich dashboard.",
+        "challenges": "Integrating front-end React components with Flask APIs.",
+        "solutions": "Used Axios and Flask-RESTful for clean data exchange.",
+        "results": "Increased user engagement by 20%.",
+        "skills": ["Flask", "JavaScript", "React"]
+    },
+    {
+        "id": 2,
+        "title": "Machine Learning Model",
+        "thumbnail": "images/project2_thumb.png",
+        "image": "images/project2_thumb.png",
+        "short_desc": "A predictive model for user behavior.",
+        "objectives": "Analyze large datasets to predict retention.",
+        "challenges": "Handling big data efficiently.",
+        "solutions": "Used Python, Pandas, and scikit-learn.",
+        "results": "Achieved 95% accuracy on test data.",
+        "skills": ["Python", "MachineLearning"]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "5 Tips for Building Scalable Web Applications",
+        "date": "2024-01-15",
+        "excerpt": "Discover how to design web applications that can handle growth efficiently with these 5 key principles.",
+        "link": "https://example.com/blog/scalable-web-applications"
+    },
+    {
+        "title": "Introduction to Flask for Beginners",
+        "date": "2023-11-30",
+        "excerpt": "Learn the basics of Flask, a lightweight Python web framework, and build your first app.",
+        "link": "https://example.com/blog/flask-for-beginners"
+    },
+    {
+        "title": "Improving Website Accessibility",
+        "date": "2023-10-05",
+        "excerpt": "Learn simple yet effective ways to make your website accessible to a wider audience.",
+        "link": "https://example.com/blog/website-accessibility"
+    },
+    {
+        "title": "Why Responsive Design Matters",
+        "date": "2023-09-01",
+        "excerpt": "Understand the importance of responsive design and how it improves user experience across devices.",
+        "link": "https://example.com/blog/responsive-design"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "John Doe",
+        "role": "Product Manager at TechCorp",
+        "message": "This developer exceeded our expectations, delivering exceptional work on time and within budget.",
+        "image": "images/default.png"
+    },
+    {
+        "name": "Jane Smith",
+        "role": "CEO of Innovate Inc.",
+        "message": "Their ability to solve complex problems and implement elegant solutions is unparalleled.",
+        "image": "images/default.png"
+    },
+    {
+        "name": "Alex Johnson",
+        "role": "Freelance Designer",
+        "message": "Working with this developer was an absolute pleasure. They brought my vision to life flawlessly.",
+        "image": "images/default.png"
+    },
+    {
+        "name": "Chris Lee",
+        "role": "Lead Engineer at BuildBetter",
+        "message": "They have a strong command of both back-end and front-end development, producing outstanding results.",
+        "image": "images/default.png"
+    }
+]
